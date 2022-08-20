@@ -1,4 +1,16 @@
-function createPass() {
+// Assignment code
+var generateBtn = document.querySelector("#generate");
+
+
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+
+
 
 }
 
@@ -24,21 +36,24 @@ if (passwordLength < 8 || passwordLength > 128) {
 // var  numbers = confirm("Would you like to include numbers in your password? \nOK for YES, Cancel for NO");
 // var specialChars = confirm("Would you like to include special characters? \nOK for YES, Cancel for NO");
 
-var password = {
-  passwordLength = confirm("Would you like to include UPPERCASE letters? \nOK for YES, Cancel for NO");
-  upperChars = confirm("Would you like to include UPPERCASE letters? \nOK for YES, Cancel for NO");
-  lowerChars = confirm("Would you like to include lower case letters? \nOK for YES, Cancel for NO");
-  numbers = confirm("Would you like to include numbers in your password? \nOK for YES, Cancel for NO");
-   specialChars = confirm("Would you like to include special characters? \nOK for YES, Cancel for NO");
-} 
+var passwordLength = confirm("Would you like to include UPPERCASE letters? \nOK for YES, Cancel for NO");
 
+var upperChars = confirm("Would you like to include UPPERCASE letters? \nOK for YES, Cancel for NO");
+
+var lowerChars = confirm("Would you like to include lower case letters? \nOK for YES, Cancel for NO");
+
+var numbers = confirm("Would you like to include numbers in your password? \nOK for YES, Cancel for NO");
+
+var specialChars = confirm("Would you like to include special characters? \nOK for YES, Cancel for NO");
+
+if (!specialChars && !numberChars && !lowerChars && !upperChars)alert("Choose at least one character type for your password. We believe in you...");
+return writePassword()
 //   if (!specialChars && !numberChars && !lowerChars && !upperChars)alert("Choose at least one character type for your password. We believe in you...");
 // return generatePassword(); 
 // }
 
 //  CHECK to see that at least 1 option is TRUE
-if (!specialChars && !numberChars && !lowerChars && !upperChars)alert("Choose at least one character type for your password. We believe in you...");
-return generatePassword()
+
     //     START OVER return to start variable
 
 //  an empty array to hold user's selected characters
@@ -76,17 +91,10 @@ function validateInput (upperChars) {
     // return passwordArray.join()
     
 
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
 
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
 
-}
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
