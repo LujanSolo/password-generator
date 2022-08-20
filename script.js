@@ -1,4 +1,5 @@
 // Assignment code
+console.log(this)
 var generateBtn = document.querySelector("#generate");
 
 
@@ -7,11 +8,22 @@ function writePassword() {
   var password = generatePassword();
 
   function generatePassword() {
+    var minChars = 8;
+    var maxChars = 128;
+    
+    var passwordLength = parseInt(prompt("How long would you like your password to be? Be sure to pick a number between 8 and 128."));
+
     var lowerCase = "abcdefghijklmnopqrstuvwxyz";
     var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     var specialCase = " !@#$%^&*()_-+=\"'{/}:;?>.<,";
     var number = "1234567890";
+    
     var allInput = ""; //a string to hold confirmed data
+
+    if (passwordLength > maxChars || passwordLength < minChars) {
+      prompt("Please choose a number between 8 and 128.");
+      return generatePassword;
+    }
 
 
 
