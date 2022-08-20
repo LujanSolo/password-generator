@@ -63,8 +63,11 @@ function writePassword() {
         }
         
         // now, the var password contains all characters based on user's choices. USE math.method to randomly select characters from VAR PASSWORD based on the number of CHARACTERS the user chose:
-
-        
+        function randoPass(){
+          for (var i=0; i < password.length; i++){
+            masterArray.push(password[i]);
+          }
+        }
       }
 
 
