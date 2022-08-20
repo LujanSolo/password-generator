@@ -11,7 +11,11 @@ function writePassword() {
     var maxChars = 128;
     
     var passwordLength = parseInt(prompt("How long would you like your password to be? Be sure to pick a number between 8 and 128."));
-    
+
+// an array to store the random choices based on input from user
+    var passArray = [Math.floor(Math.random() * isLower.length), Math.floor(Math.random() * isUpper.length), Math.floor(Math.random() * isSpecial.length), Math.floor(Math.randomI() * isNumber.length)];
+
+
 // all possible variables here
     
     var isLower = "abcdefghijklmnopqrstuvwxyz";
@@ -26,15 +30,21 @@ function writePassword() {
     var numbers = confirm("Would you like to include numbers in your password? \nOK for YES, Cancel for NO");
     var specialChars = confirm("Would you like to include special characters? \nOK for YES, Cancel for NO");
     
+    //validate at least one character type has been chosen:
     if (!specialChars && !numberChars && !lowerChars && !upperChars)alert("Choose at least one character type for your password. We believe in you...") 
     return writePassword();
     }
+
     //validate number of characters
     if (passwordLength < 8 || passwordLength > 128) {
     alert("Please select a number between \n8 and 128 \n for password length")
       return writePassword()
     }
 
+    //now, generate a random pass based on user's choices. So, math.random and push to password array
+    if (upperChars) {
+      for (var i=0; i<
+    }
     }
   var passwordText = document.querySelector("#password");
 
