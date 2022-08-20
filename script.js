@@ -3,10 +3,17 @@ var generateBtn = document.querySelector("#generate");
 
 
 // List of all possible characters for password, masterArray to hold random selections, character min/max
-var isLower = "abcdefghijklmnopqrstuvwxyz";
-var isUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var isSpecial = " !@#$%^&*()_-+=\"'{/}:;?>.<,";
-var isNumber = "1234567890";
+// var isLower = "abcdefghijklmnopqrstuvwxyz";
+// var isUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+// var isSpecial = " !@#$%^&*()_-+=\"'{/}:;?>.<,";
+// var isNumber = "1234567890";
+
+
+var isLower = ["a", "b","c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o","p", "q", "r","s", "t", "u", "v", "w", "x", "y", "z"];
+var isUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var isSpecial = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"];
+var isNumber = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+
 
 var masterArray = ["isLower", "isUpper", "isSpecial", "isNumber"];
 
@@ -16,7 +23,7 @@ var maxChars = 128;
 // function must go through prompts, resetting user if character number is invalid
 function generatePassword() { 
 
-  var possibleChars = "";
+  var possibleChars = [];
   
   var passwordLength = parseInt(prompt("How long would you like your password to be? Be sure to pick a number between 8 and 128."));
   // if clause to check if password length is valid
