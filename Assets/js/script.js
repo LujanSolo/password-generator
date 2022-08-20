@@ -1,23 +1,26 @@
-// PSEUDO-CODE:
+  // at start, ask user how many characters they want in password
+var numChars = prompt("How many characters would you like your password to be? Note: Password length must be at least 8 and no more than 128 characters.");
 
-
+//validate that they've got at least that much right
+if (numChars < 8 || numChars > 128) {
+  alert("Please select a number between \n8 and 128 \n for password length");
+}
 //  VARIABLES needed -  
 //      -characters of lowercase, upper, numeric, and special
-var numChars = confirm("Would you like numbers? \nOK for YES, Cancel for NO");
-var specialChars = confirm("Would you like special characters? \nOK for YES, Cancel for NO");
-var lowerChars = confirm("Would you like to include lower case letters? \nOK for YES, Cancel for NO");
 var upperChars = confirm("Would you like to include UPPERCASE letters? \nOK for YES, Cancel for NO");
+var lowerChars = confirm("Would you like to include lower case letters? \nOK for YES, Cancel for NO");
+var  numbers = confirm("Would you like to include numbers in your password? \nOK for YES, Cancel for NO");
+var specialChars = confirm("Would you like to include special characters? \nOK for YES, Cancel for NO");
 
+
+//  an empty array to hold user's selected characters
 var charOptions = [];
+  
+//    then, CHECK to see if all user entries are valid (function) 
+function validateInput (upperChars) {}
 
-//  Make an empty array to hold user's selected characters
-    // var charOptions = []
 
-
-    // at start, ask user how many characters they want in password
-    // var numChars = prompt("How many characters would you like your password to be?")
-    //    then, CHECK to see if all user entries are valid (function) 
-    // function checkUserInput(numChars) {
+// function checkUserInput(numChars) {
     //   parseInt(chars)?
     //   if (chars < 8 || chars > 128) { 
     //   return null
