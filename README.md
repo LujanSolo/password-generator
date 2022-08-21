@@ -15,7 +15,6 @@ For the developer, some discoveries were made whilst making this code funtional,
  -discovered a probability irregularity that resulted in the user getting more characters than desired (see notes on js for fix)
 
  -addressed the issue of missing character selections in user's password, effectively forcing the program to guarantee a character from each of the user's selections
-able of Contents (Optional)
 
 ## Usage
 
@@ -26,11 +25,16 @@ Users must choose the number of characters desired in their password (between 8 
 Upon completion of the pop-up questionnaire, the user will be given a randomly generated password based upon their criteria.
 
 ## Screenshots
-Webpage at start with opening prompt:
+1. Webpage at start with opening prompt:
+
 ![alt text](/Assets/images/password-site2.png "Photo of website at start.")
-Webpage at selection option:
+
+2. Webpage at selection option:
+
 ![alt text](/Assets/images/password-site3.png "Website at first prompt.")
-Webpage with resulting password displayed:
+
+3. Webpage with resulting password displayed:
+
 ![alt text](/Assets/images/password-site.png "Website with final password result.")
 
 ## License
