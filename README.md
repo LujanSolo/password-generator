@@ -2,6 +2,10 @@
 
 ## An 8-128 alphanumeric (including special characters) password generator
 
+WEBSITE LINK: https://lujansolo.github.io/password-generator/
+
+GITHUB REPO LINK: https://github.com/LujanSolo/password-generator
+
 In an effort to better understand JavaScript's functionality, the software developer has refined the existing code related to the given password generator. For the user, the new pasword generator will provide a randomly generated password based on a few selections of input from the user, negating the need to come up with complicated passwords on one's own.
 
 For the developer, some discoveries were made whilst making this code funtional, including:
