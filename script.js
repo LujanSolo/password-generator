@@ -2,17 +2,17 @@
 var generateBtn = document.querySelector("#generate");
 
 // List of all possible characters for password, masterArray to hold random selections, character min/max
-var isLower = "abcdefghijklmnopqrstuvwxyz";
-var isUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var isSpecial = " !@#$%^&*()_-+=\"'{/}:;?>.<,";
-var isNumber = "1234567890";
+var lowerLetters = "abcdefghijklmnopqrstuvwxyz";
+var upperLetters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var specialLetters = " !@#$%^&*()_-+=\"'{/}:;?>.<,";
+var numberChars = "1234567890";
 
-// var isLower = ["a", "b","c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o","p", "q", "r","s", "t", "u", "v", "w", "x", "y", "z"];
+// var lowerLetters = ["a", "b","c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o","p", "q", "r","s", "t", "u", "v", "w", "x", "y", "z"];
 // var isUpper = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 // var isSpecial = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", ":", ";", "<", "=", ">", "?", "@", "[", "]", "^", "_", "`", "{", "|", "}", "~"];
 // var isNumber = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
 
-// var masterArray = [isLower, isUpper, isSpecial, isNumber];
+// var masterArray = [lowerLetters, isUpper, isSpecial, isNumber];
 
 var minChars = 8;
 var maxChars = 128;
@@ -59,16 +59,17 @@ function generatePassword() {
   var password = "";
 
   if (isLowerChars) {
-    password += isLower[Math.floor(Math.random() * isLower.length)];
+    password += lowerLetters[Math.floor(Math.random() * lowerLetters.length)];
   }
   if (isUpperChars) {
-    password += isUpper[Math.floor(Math.random() * isUpper.length)];
+    password += upperLetters[Math.floor(Math.random() * upperLetters.length)];
   }
   if (isSpecialChars) {
-    password += isSpecial[Math.floor(Math.random() * isSpecial.length)];
+    password +=
+      specialLetters[Math.floor(Math.random() * specialLetters.length)];
   }
   if (isNumberChars) {
-    password += isNumber[Math.floor(Math.random() * isNumber.length)];
+    password += numberChars[Math.floor(Math.random() * numberChars.length)];
   }
 
   // if clause to see if user chose at least one character type:
@@ -79,16 +80,16 @@ function generatePassword() {
   console.log(1);
   // if (lowerChars || upperChars || specialChars || numberChars) {
   if (isLowerChars) {
-    possibleChars += isLower;
+    possibleChars += lowerLetters;
   }
   if (isUpperChars) {
-    possibleChars += isUpper;
+    possibleChars += upperLetters;
   }
   if (isSpecialChars) {
-    possibleChars += isSpecial;
+    possibleChars += specialLetters;
   }
   if (isNumberChars) {
-    possibleChars += isNumber;
+    possibleChars += numberChars;
   }
   console.log(possibleChars);
   var currentPasswordLength = password.length;
